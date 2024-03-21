@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Report xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition">
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Style>
+          <FontFamily>Arial</FontFamily>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+        <ReportItems>
+          <Textbox Name="TextBox1">
+            <Left>189pt</Left>
+            <Top>87.75pt</Top>
+            <Height>37.5pt</Height>
+            <Width>150pt</Width>
+            <Style>
+              <FontFamily>Arial</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Code.GetColor("Red")</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <Color>Black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <FontFamily>Arial</FontFamily>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+        </ReportItems>
+        <Height>3.125in</Height>
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <PageFooter>
+          <Style>
+            <FontFamily>Arial</FontFamily>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+          <Height>0.72917in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+        </PageFooter>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style>
+          <FontFamily>Arial</FontFamily>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <AutoRefresh>0</AutoRefresh>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <Code>Private colorPalette As String() = {"#BE3821", "#8A979B","#C4E2E0","#4CADAF","#A3D3D6", "#729B8E","#1F3877","#C67575"}
+    Private count As Integer = 0
+    Private mapping As New System.Collections.Hashtable()
+
+    Public Function GetColor(ByVal groupingValue As String) As String
+      If mapping.ContainsKey(groupingValue) Then
+        Return mapping(groupingValue)
+      End If
+      Dim c As String = colorPalette(count Mod colorPalette.Length)
+      count = count + 1
+      mapping.Add(groupingValue, c)
+      Return c
+    End Function</Code>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:PageUnit>Px</rd:PageUnit>
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+</Report>

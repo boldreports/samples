@@ -6,33 +6,13 @@ This project was created using JavaScript. This application aims to demonstrate 
 
 The samples requires the below requirements to run.
 
-* [Node.js](https://nodejs.org)
+* [Visual Studio Code](https://code.visualstudio.com/download)
 
 ## Using the Reporting Samples
 
-### Install
+* Open the html file `AutoHideDelaySample.html` in Visual Studio Code.
 
-To install all dependent packages, use the below command
-
-```bash
-npm install
-```
-
-### Build
-
-To compile the source files, use the below command.
-
-```bash
-npm run build
-```
-
-### Run/Serve
-
-To run the samples, use the below command
-
-```bash
-npm run serve
-```
+* Press `F5` or click the `Run` button in Visual Studio Code to launch the application.
 
 ## Why this sample?
 

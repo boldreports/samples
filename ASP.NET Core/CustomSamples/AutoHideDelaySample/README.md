@@ -30,8 +30,6 @@ The [Bold Reports V2 report viewer offers a feature](https://help.boldreports.co
 
 A complete Bold Reports documentation for using Report Viewer control in ASP.NET Core sample application can be found on [ASP.NET Core](https://help.boldreports.com/embedded-reporting/aspnet-core-reporting/report-viewer/display-ssrs-rdl-report-in-asp-net-core-application/).
 
-## Support and Feedback
+## Support
 
-* For any other queries, reach our [Bold Reports support team](mailto:support@boldreports.com) or [Feedback portal](https://www.boldreports.com/feedback/).
-
-* To renew the subscription, click [here](https://www.boldreports.com/pricing/on-premise) or contact our sales team at <https://www.boldreports.com/contact>.
+* If you encounter any challenges or have inquiries regarding report creation or the issues in the reports, please do not hesitate to open a [support ticket](https://support.boldreports.com/support) with us. This allows us to investigate the matter and offer assistance to resolve any issues.

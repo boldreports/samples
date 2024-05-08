@@ -50,14 +50,3 @@ For detailed documentation and tutorials on integrating barcode extensions with 
 
 ## Support
 If you encounter any challenges or have inquiries regarding report creation or issues in the reports, please do not hesitate to open a [support ticket](https://support.boldreports.com/support) with us. This allows us to investigate the matter and offer assistance to resolve any issues.
-
-
-
-
-## Programmatically Changing the XML DataSource at Runtime in Blazor
-
-In this sample application, you can dynamically change the XML data source at runtime and render the reports. This can be achieved by deserializing the XML data (read as a text file) and loading it into the report at runtime in the `OnInitReportOptions` method.
-
-## Support
-
-If you encounter any challenges or have inquiries regarding report creation or issues in the reports, please do not hesitate to open a [support ticket](https://support.boldreports.com/support) with us. This allows us to investigate the matter and offer assistance to resolve any issues.

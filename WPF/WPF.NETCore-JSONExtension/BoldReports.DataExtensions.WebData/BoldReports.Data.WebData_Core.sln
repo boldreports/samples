@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoldReports.Data.WebData_Core", "BoldReports.Data.WebData_Core.csproj", "{1EA36F92-74F4-4F10-8EE0-105B1990092A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Release-Xml|Any CPU = Release-Xml|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EA36F92-74F4-4F10-8EE0-105B1990092A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA36F92-74F4-4F10-8EE0-105B1990092A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA36F92-74F4-4F10-8EE0-105B1990092A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA36F92-74F4-4F10-8EE0-105B1990092A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EA36F92-74F4-4F10-8EE0-105B1990092A}.Release-Xml|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA36F92-74F4-4F10-8EE0-105B1990092A}.Release-Xml|Any CPU.Build.0 = Release|Any CPU
+		{49CF189C-30C4-489E-A2E3-EA12E93EE25D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49CF189C-30C4-489E-A2E3-EA12E93EE25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49CF189C-30C4-489E-A2E3-EA12E93EE25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49CF189C-30C4-489E-A2E3-EA12E93EE25D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49CF189C-30C4-489E-A2E3-EA12E93EE25D}.Release-Xml|Any CPU.ActiveCfg = Release|Any CPU
+		{49CF189C-30C4-489E-A2E3-EA12E93EE25D}.Release-Xml|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A210E75D-3ADB-472B-A169-3209C62E96A5}
+	EndGlobalSection
+EndGlobal

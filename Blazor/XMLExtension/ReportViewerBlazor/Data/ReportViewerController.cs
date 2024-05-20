@@ -61,18 +61,7 @@ namespace ReportViewerBlazor.Data
             MemoryStream stream = new MemoryStream();
             serializer.SaveReportDefinition(stream, reportDefinition);
             stream.Position = 0;
-            string reportpath = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\NewXml_report.rdl";
-            if (System.IO.File.Exists(reportpath))
-            {
-                System.IO.File.Delete(reportpath);
-            }
-            FileStream file = new FileStream(reportpath, FileMode.Create, FileAccess.Write);
-            stream.WriteTo(file);
-            file.Close();
-            stream.Close();
-
-            System.IO.FileStream fileStream = new System.IO.FileStream(reportpath, System.IO.FileMode.Open, System.IO.FileAccess.Read);
-            reportOption.ReportModel.Stream = fileStream;
+            reportOption.ReportModel.Stream = stream;
         }
 
         // Method will be called when report is loaded internally to start the layout process with ReportHelper.

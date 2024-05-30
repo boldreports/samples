@@ -14,7 +14,7 @@
     // Used to render the Bold Report Viewer component in Blazor page.
     public async void RenderReportViewer()
     {
-        viewerOptions.ReportName = "loadXmlFile";
+        viewerOptions.ReportName = "XmlReport";
         viewerOptions.ServiceURL = "/api/ReportViewer";
         await JSRuntime.InvokeVoidAsync("BoldReports.RenderViewer", "report-viewer", viewerOptions);
     }

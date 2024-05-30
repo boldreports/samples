@@ -41,21 +41,27 @@ namespace ReportViewerBlazor.Data
         [NonAction]
         public void OnInitReportOptions(ReportViewerOptions reportOption)
         {
+            // Get the root path of the web application.
             string basePath = _hostingEnvironment.WebRootPath;
+            // Load the XmlReport.rdl report from the application folder wwwroot\Resources.
             System.IO.FileStream inputStream = new System.IO.FileStream(basePath + @"\Resources\" + reportOption.ReportModel.ReportPath + ".rdl", System.IO.FileMode.Open, System.IO.FileAccess.Read);
             MemoryStream reportStream = new MemoryStream();
             inputStream.CopyTo(reportStream);
             reportStream.Position = 0;
             inputStream.Close();
 
+            // Instantiate a serializer to deserialize the report definition.
             BoldReports.RDL.DOM.ReportSerializer serializer = new BoldReports.RDL.DOM.ReportSerializer();
             BoldReports.RDL.DOM.ReportDefinition reportDefinition = serializer.GetReportDefinition(reportStream);
 
+            // Load the XML data from the NewData.xml file into an XmlDocument.
             var xmlDoc = new System.Xml.XmlDocument();
-            xmlDoc.Load(basePath + @"\Resources\Newitems.xml");
+            xmlDoc.Load(basePath + @"\Resources\NewData.xml");
             var xmlDocString = xmlDoc.InnerXml;
             var xmlDocByteArray = Encoding.ASCII.GetBytes(xmlDocString);
             var xmlDocBase64 = Convert.ToBase64String(xmlDocByteArray);
+            // Update the report's data source with the Base64 encoded XML data.
+            // You can find the data source and then you can change datasource based on your requirements.
             reportDefinition.DataSources[0].ConnectionProperties.EmbeddedData.Data = xmlDocBase64;
 
             MemoryStream stream = new MemoryStream();

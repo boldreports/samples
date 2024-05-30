@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <element>
+      <FirstName>First Name 1</FirstName>
+      <ID>1</ID>
+      <IDBook>1</IDBook>
+      <LastName>Last Name 1</LastName>
+   </element>
+   <element>
+      <FirstName>First Name 2</FirstName>
+      <ID>2</ID>
+      <IDBook>1</IDBook>
+      <LastName>Last Name 2</LastName>
+   </element>
+   <element>
+      <FirstName>First Name 3</FirstName>
+      <ID>3</ID>
+      <IDBook>1</IDBook>
+      <LastName>Last Name 3</LastName>
+   </element>
+</root>

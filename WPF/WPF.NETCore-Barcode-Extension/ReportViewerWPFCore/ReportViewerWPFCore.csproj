@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\sales-order-detail.rdl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bold.Licensing" Version="5.4.38" />
+    <PackageReference Include="BoldReports.WPF" Version="5.4.38" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BoldReports.Extensions.BarcodeCRI\BoldReports.Extensions.BarcodeCRI.csproj" />
+  </ItemGroup>
+
+</Project>

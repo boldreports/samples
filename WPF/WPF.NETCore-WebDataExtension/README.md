@@ -34,7 +34,7 @@ To integrate JSON data source functionality with Bold Reports in your WPF .NET C
 2. **Install Bold Reports NuGet Package:**
    Add the Bold Reports WPF NuGet package to your project by including the following package reference in your project file:
    ```xml
-   <PackageReference Include="BoldReports.Net.WPF" Version="latest" />
+   <PackageReference Include="BoldReports.WPF" Version="latest" />
    ```
 
 3. **Incorporate JSON Data Source in Report Viewer:**

@@ -10,11 +10,47 @@
           </Border>
         </Style>
         <ReportItems>
-          <Tablix Name="Tablix2">
-            <Left>13.49062pt</Left>
-            <Top>15.75pt</Top>
+          <Textbox Name="TextBox1">
+            <Left>22.5pt</Left>
+            <Top>5.25pt</Top>
+            <Height>37.5pt</Height>
+            <Width>353.25pt</Width>
+            <Style>
+              <FontFamily>Arial</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Load xml file from disk</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>black</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <FontFamily>Arial</FontFamily>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+          </Textbox>
+          <Tablix Name="Tablix1">
+            <Left>26.24062pt</Left>
+            <Top>57.75pt</Top>
             <Height>36pt</Height>
-            <Width>349.5pt</Width>
+            <Width>288pt</Width>
             <CustomProperties>
               <CustomProperty>
                 <Name>MaxRowCount</Name>
@@ -38,13 +74,13 @@
                   <Width>72pt</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>67.5pt</Width>
+                  <Width>72pt</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>96.75pt</Width>
+                  <Width>72pt</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>113.25pt</Width>
+                  <Width>72pt</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -53,7 +89,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TextBox9">
+                        <Textbox Name="TextBox2">
                           <Left>0in</Left>
                           <Top>0in</Top>
                           <Height>18pt</Height>
@@ -76,7 +112,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Employee ID</Value>
+                                  <Value>First Name</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -86,7 +122,6 @@
                               </TextRuns>
                               <Style>
                                 <FontFamily>Arial</FontFamily>
-                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -97,11 +132,11 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TextBox15">
+                        <Textbox Name="TextBox3">
                           <Left>0in</Left>
                           <Top>0in</Top>
                           <Height>18pt</Height>
-                          <Width>67.5pt</Width>
+                          <Width>72pt</Width>
                           <Style>
                             <BackgroundColor>#03a9f4</BackgroundColor>
                             <FontFamily>Arial</FontFamily>
@@ -120,7 +155,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Name</Value>
+                                  <Value>ID</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -130,7 +165,6 @@
                               </TextRuns>
                               <Style>
                                 <FontFamily>Arial</FontFamily>
-                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -141,11 +175,11 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TextBox10">
+                        <Textbox Name="TextBox4">
                           <Left>0in</Left>
                           <Top>0in</Top>
                           <Height>18pt</Height>
-                          <Width>96.75pt</Width>
+                          <Width>72pt</Width>
                           <Style>
                             <BackgroundColor>#03a9f4</BackgroundColor>
                             <FontFamily>Arial</FontFamily>
@@ -164,7 +198,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Position</Value>
+                                  <Value>Last Name</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -174,7 +208,6 @@
                               </TextRuns>
                               <Style>
                                 <FontFamily>Arial</FontFamily>
-                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -185,11 +218,11 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TextBox11">
+                        <Textbox Name="TextBox8">
                           <Left>0in</Left>
                           <Top>0in</Top>
                           <Height>18pt</Height>
-                          <Width>113.25pt</Width>
+                          <Width>72pt</Width>
                           <Style>
                             <BackgroundColor>#03a9f4</BackgroundColor>
                             <FontFamily>Arial</FontFamily>
@@ -208,7 +241,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Department</Value>
+                                  <Value>ID Book</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
@@ -218,7 +251,6 @@
                               </TextRuns>
                               <Style>
                                 <FontFamily>Arial</FontFamily>
-                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -234,7 +266,7 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TextBox12">
+                        <Textbox Name="TextBox5">
                           <Left>0in</Left>
                           <Top>0in</Top>
                           <Height>18pt</Height>
@@ -256,7 +288,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!EmployeeID.Value</Value>
+                                  <Value>=Fields!FirstName.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                   </Style>
@@ -274,11 +306,11 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TextBox16">
+                        <Textbox Name="TextBox6">
                           <Left>0in</Left>
                           <Top>0in</Top>
                           <Height>18pt</Height>
-                          <Width>67.5pt</Width>
+                          <Width>72pt</Width>
                           <Style>
                             <FontFamily>Arial</FontFamily>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -296,7 +328,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Name.Value</Value>
+                                  <Value>=Fields!ID.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                   </Style>
@@ -314,11 +346,11 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TextBox13">
+                        <Textbox Name="TextBox7">
                           <Left>0in</Left>
                           <Top>0in</Top>
                           <Height>18pt</Height>
-                          <Width>96.75pt</Width>
+                          <Width>72pt</Width>
                           <Style>
                             <FontFamily>Arial</FontFamily>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -336,7 +368,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Position.Value</Value>
+                                  <Value>=Fields!LastName.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                   </Style>
@@ -354,11 +386,11 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TextBox14">
+                        <Textbox Name="TextBox9">
                           <Left>0in</Left>
                           <Top>0in</Top>
                           <Height>18pt</Height>
-                          <Width>113.25pt</Width>
+                          <Width>72pt</Width>
                           <Style>
                             <FontFamily>Arial</FontFamily>
                             <PaddingLeft>2pt</PaddingLeft>
@@ -376,7 +408,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Department.Value</Value>
+                                  <Value>=Fields!IDBook.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                   </Style>
@@ -410,15 +442,15 @@
                   <KeepWithGroup>After</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="Details1" />
+                  <Group Name="Details" />
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
           </Tablix>
         </ReportItems>
-        <Height>60.75pt</Height>
+        <Height>107.25pt</Height>
       </Body>
-      <Width>370.5pt</Width>
+      <Width>388.5pt</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
@@ -437,8 +469,14 @@
   <DataSources>
     <DataSource Name="DataSource1">
       <ConnectionProperties>
-        <DataProvider>JSON</DataProvider>
-        <ConnectString>{"Data":"{\n  \"employees\": [\n    {\n      \"EmployeeID\": \"E001\",\n      \"Name\": \"John Smith\",\n      \"Position\": \"Software Engineer\",\n      \"Department\": \"Engineering\"\n    },\n    {\n      \"EmployeeID\": \"E002\",\n      \"Name\": \"Jane Doe\",\n      \"Position\": \"Project Manager\",\n      \"Department\": \"Management\"\n    },\n    {\n      \"EmployeeID\": \"E003\",\n      \"Name\": \"Sam Brown\",\n      \"Position\": \"Data Analyst\",\n      \"Department\": \"Analytics\"\n    },\n    {\n      \"EmployeeID\": \"E004\",\n      \"Name\": \"Emily Davis\",\n      \"Position\": \"HR Specialist\",\n      \"Department\": \"Human Resources\"\n    }\n  ]\n}","DataMode":"inline","URL":""}</ConnectString>
+        <DataProvider>XML</DataProvider>
+        <ConnectString>{"Data":"","DataMode":"file","URL":""}</ConnectString>
+        <rd:EmbeddedData>
+          <rd:Name>b88e7ea6-57b1-465d-8b39-2042e4eb39ec</rd:Name>
+          <rd:FileType>xml</rd:FileType>
+          <rd:FileName>Data</rd:FileName>
+          <rd:Data>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxyb290Pg0KICAgPGVsZW1lbnQ+DQogICAgICA8Rmlyc3ROYW1lPkZpcnN0IE5hbWUgMTwvRmlyc3ROYW1lPg0KICAgICAgPElEPjE8L0lEPg0KICAgICAgPElEQm9vaz4xPC9JREJvb2s+DQogICAgICA8TGFzdE5hbWU+TGFzdCBOYW1lIDE8L0xhc3ROYW1lPg0KICAgPC9lbGVtZW50Pg0KICAgPGVsZW1lbnQ+DQogICAgICA8Rmlyc3ROYW1lPkZpcnN0IE5hbWUgMjwvRmlyc3ROYW1lPg0KICAgICAgPElEPjI8L0lEPg0KICAgICAgPElEQm9vaz4xPC9JREJvb2s+DQogICAgICA8TGFzdE5hbWU+TGFzdCBOYW1lIDI8L0xhc3ROYW1lPg0KICAgPC9lbGVtZW50Pg0KICAgPGVsZW1lbnQ+DQogICAgICA8Rmlyc3ROYW1lPkZpcnN0IE5hbWUgMzwvRmlyc3ROYW1lPg0KICAgICAgPElEPjM8L0lEPg0KICAgICAgPElEQm9vaz4xPC9JREJvb2s+DQogICAgICA8TGFzdE5hbWU+TGFzdCBOYW1lIDM8L0xhc3ROYW1lPg0KICAgPC9lbGVtZW50Pg0KPC9yb290Pg==</rd:Data>
+        </rd:EmbeddedData>
       </ConnectionProperties>
       <rd:ImpersonateUser>false</rd:ImpersonateUser>
     </DataSource>
@@ -446,20 +484,20 @@
   <DataSets>
     <DataSet Name="DataSet1">
       <Fields>
-        <Field Name="EmployeeID">
-          <DataField>EmployeeID</DataField>
+        <Field Name="FirstName">
+          <DataField>FirstName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Name">
-          <DataField>Name</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="ID">
+          <DataField>ID</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="Position">
-          <DataField>Position</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
+        <Field Name="IDBook">
+          <DataField>IDBook</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
-        <Field Name="Department">
-          <DataField>Department</DataField>
+        <Field Name="LastName">
+          <DataField>LastName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -471,10 +509,10 @@
           <Tables>
             <Table Name="Result" Schema="">
               <Columns>
-                <Column Name="EmployeeID" IsDuplicate="False" IsSelected="True" />
-                <Column Name="Name" IsDuplicate="False" IsSelected="True" />
-                <Column Name="Position" IsDuplicate="False" IsSelected="True" />
-                <Column Name="Department" IsDuplicate="False" IsSelected="True" />
+                <Column Name="FirstName" IsDuplicate="False" IsSelected="True" />
+                <Column Name="ID" IsDuplicate="False" IsSelected="True" />
+                <Column Name="IDBook" IsDuplicate="False" IsSelected="True" />
+                <Column Name="LastName" IsDuplicate="False" IsSelected="True" />
               </Columns>
               <SchemaLevels>
                 <SchemaInfo Name="Result" SchemaType="Table" />

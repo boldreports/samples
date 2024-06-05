@@ -31,9 +31,10 @@ namespace ReportViewerWPFCore
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            string filePath = Environment.CurrentDirectory;
-            filePath = filePath.Replace("bin\\Debug\\net7.0-windows", "");
-            string reportPath = filePath + @"Resources\barcode.rdl";
+            string currentDirectory = Environment.CurrentDirectory;
+            int binIndex = currentDirectory.IndexOf("bin", StringComparison.OrdinalIgnoreCase);
+            string filePathWithoutBin = binIndex >= 0 ? currentDirectory.Substring(0, binIndex) : currentDirectory;
+            string reportPath = filePathWithoutBin + @"Resources\barcode.rdl";
             this.reportViewer.ReportPath = reportPath;
             this.reportViewer.RefreshReport();
         }

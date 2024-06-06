@@ -40,6 +40,7 @@ Follow these steps to integrate barcode functionality with Bold Reports in your 
 
 3. **Add Project Reference**
    Add the custom Barcode Extension **BoldReports.Extensions.BarcodeCRI** project reference to your solution. Refer to the image below for guidance.
+   
    ![BarcodeExtension.png](https://support.boldreports.com/kb/agent/attachment/article/15960/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxOTExIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5ib2xkcmVwb3J0cy5jb20ifQ.qP3noY3tta4G72B_fgCCDRNJe24Y2QcQza1XQl2wERM)
 
 4. **Add Barcode Extension to the Report Viewer of the App.config File**

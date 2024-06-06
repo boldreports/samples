@@ -38,6 +38,7 @@ To integrate JSON data source functionality with Bold Reports in your WPF .NET C
    ```
 3. **Add Project Reference**
    Add the custom WebData Extension **BoldReports.Data.WebData_Core** project reference to your solution. Refer to the image below for guidance.
+   
    ![JSONExtension.png](https://support.boldreports.com/kb/agent/attachment/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzNzM4Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5ib2xkcmVwb3J0cy5jb20ifQ.uC0pGnq9liRqUduCLbVe4TojcsVsFiW79N4kzdgetSY)
 
 4. **Incorporate JSON Data Source in Report Viewer:**

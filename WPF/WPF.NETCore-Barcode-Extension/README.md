@@ -1,24 +1,24 @@
 # Integrating Barcode Extension with Bold Reports in WPF .NET Core
 
-Enhance your WPF .NET Core applications' reporting capabilities by integrating barcode functionality using Bold Reports. Below are the steps to add a barcode extension to the Bold Reports Report Viewer in a WPF .NET Core application.
+Enhance your WPF .NET Core applications reporting capabilities by integrating barcode functionality using Bold Reports. Below are the steps to add a barcode extension to the Bold Reports Report Viewer in a WPF .NET Core application.
 
 ## Requirements
 
 Ensure you have the following prerequisites before proceeding:
 
 * Visual Studio 2019 or later
-* .NET 5.0 or later
+* .NET 5.0 or higher
 
 ## Running the Sample
 
-1. Open the solution file `ReportViewerWPFCore.sln` in Visual Studio.
+1. Open the solution file **ReportViewerWPFCore.sln** in Visual Studio.
 2. The necessary dependencies will be installed automatically upon compilation:
 
    | Package                   | Purpose                                                      |
    | ------------------------- | ------------------------------------------------------------ |
    | `BoldReports.WPF`| Contains WPF Reporting controls (Report Viewer and Report Writer) to preview and export the reports.       |
 
-3. Press `F5` or click the `Run` button in Visual Studio to launch the application.
+3. Press **F5** or click the **Run** button in Visual Studio to launch the application.
 
 ## Getting Started
 
@@ -39,9 +39,7 @@ Follow these steps to integrate barcode functionality with Bold Reports in your 
     ```
 
 3. **Add Project Reference**
-   Add the custom Barcode Extension **BoldReports.Extensions.BarcodeCRI** project reference to your solution.
-
-   **Refer to the image below for guidance:**
+   Add the custom Barcode Extension **BoldReports.Extensions.BarcodeCRI** project reference to your solution. Refer to the image below for guidance.
    ![BarcodeExtension.png](https://support.boldreports.com/kb/agent/attachment/article/15960/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxOTExIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5ib2xkcmVwb3J0cy5jb20ifQ.qP3noY3tta4G72B_fgCCDRNJe24Y2QcQza1XQl2wERM)
 
 4. **Add Barcode Extension to the Report Viewer of the App.config File**

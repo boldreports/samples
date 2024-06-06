@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\sales-order-detail.rdl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\sales-order-detail.rdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bold.Licensing" Version="6.1.34" />
+    <PackageReference Include="BoldReports.WPF" Version="6.1.34" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BoldReports.DataExtensions.WebData\BoldReports.Data.WebData_Core.csproj" />
+  </ItemGroup>
+
+</Project>

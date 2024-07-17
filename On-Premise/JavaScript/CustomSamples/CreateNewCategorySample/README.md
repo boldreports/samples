@@ -12,9 +12,9 @@ To run the sample, ensure you have the following requirements:
 
 Follow these steps to utilize the reporting samples:
 
-1. Open the html file `CreateCategory.html` in Visual Studio Code.
+1. Open the html file **CreateCategory.html** in Visual Studio Code.
 
-2. Press `F5` or click the `Run` button in Visual Studio Code to launch the application.
+2. Press **F5** or click the **Run** button in Visual Studio Code to launch the application.
 
 ## Why This Sample?
 
@@ -24,11 +24,11 @@ The provided code snippet illustrates how to customize the Bold Reports server i
 
 1. **Configure Application:** Initialize the Bold Reports Designer with relevant server details.
 2. **Add New Category Button:** Define the [create](https://help.boldreports.com/embedded-reporting/javascript-reporting/report-designer/api-reference/events/#create) API event function to add the **New Category** button to the UI dynamically.
-![CategoryButton.png](https://support.boldreports.com/kb/agent/attachment/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzODIyIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5ib2xkcmVwb3J0cy5jb20ifQ.l_QK7rgTnIofHNcqyMJAEYngrCvO3TaC3oZ7MxPOkB0)
+![CategoryButton.png](https://support.boldreports.com/kb/agent/attachment/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI1OTkzIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5ib2xkcmVwb3J0cy5jb20ifQ.o8mspFe7JEZ5wFiM_FEJ4RmZQM8Jq6ut1roKqSNLJQA)
 3. **Handle Button Click:** Implement the function to handle the click event for the **New Category** button, triggering the **Publish As Report** dialog.
 ![NewCategory.png](https://support.boldreports.com/kb/agent/attachment/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzODI2Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5ib2xkcmVwb3J0cy5jb20ifQ.G5vGXtrGPdiNpXXbLbfJhaP04ID2uNkHLLtkurg64P0)
 4. **Create Category:** Users can enter a new category name in the dialog and refresh the list to see the newly created category.
-![CategoryList.png](https://support.boldreports.com/kb/agent/attachment/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzODIzIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5ib2xkcmVwb3J0cy5jb20ifQ.IotTU8pvVdzSM0DJ6uvDrgglmwP5gDpeaTZShZeqOvY)
+![CategoryList.png](https://support.boldreports.com/kb/agent/attachment/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI1OTk0Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5ib2xkcmVwb3J0cy5jb20ifQ.oE4rGcV8p7TXrmzIomS04TvuYcs23PEv8ER-YF52s1k)
 5. **Save Report:** Save the report into the newly created category, improving organization and accessibility.
 ![Output.png](https://support.boldreports.com/kb/agent/attachment/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIzODIxIiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5ib2xkcmVwb3J0cy5jb20ifQ.qpPfuSwcrR7zfQFrk7-UhVplscxhZp4a9AdX8g-RX5o)
 

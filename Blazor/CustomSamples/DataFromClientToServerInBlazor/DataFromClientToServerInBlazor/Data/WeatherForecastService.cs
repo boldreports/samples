@@ -1,4 +1,4 @@
-namespace BlazorAppViewer6.Data
+namespace DataFromClientToServerInBlazor.Data
 {
     public class WeatherForecastService
     {

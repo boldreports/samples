@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("BoldReports.Extensions.BarcodeCRI")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCopyright("Copyright ©  {{copyright}}")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,8 +33,15 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 #region Assembly_Versioning
-[assembly: AssemblyVersion("1.1450.2")]
-[assembly: AssemblyInformationalVersion("1.1450.2")]
+#if NET80
+[assembly: AssemblyVersion("1.1800.1.1")]
+#elif NET70
+[assembly: AssemblyVersion("1.1700.1.1")]
+#elif NET60
+[assembly: AssemblyVersion("1.1600.1.1")]
+#else
+[assembly: AssemblyVersion("1.1450.2.0")]
+#endif
 #endregion
 
 

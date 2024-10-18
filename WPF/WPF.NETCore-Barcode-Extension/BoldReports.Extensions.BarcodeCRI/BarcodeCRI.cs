@@ -10,7 +10,13 @@ namespace BoldReports.Extensions.BarcodeCRI
     using System.Windows.Media.Imaging;
     using BoldReports.RDL.Data;
     using System.Threading;
+#if WpfCore
+    using BarcodeStandard;
+    using SkiaSharp;
+    
+#else
     using BarcodeLib;
+#endif
     using System.Windows.Controls;
     using Syncfusion.Pdf.Barcode;
     using BoldReports.Windows;
@@ -82,6 +88,57 @@ namespace BoldReports.Extensions.BarcodeCRI
                     barcodeControl.Encoding = PdfDataMatrixEncoding.Auto;
                     return GetBarcodeImage(barcodeControl);
                 }
+#if WpfCore
+                else
+                {
+                    BarcodeStandard.Type type = BarcodeStandard.Type.Unspecified;
+                    switch (barcodeType)
+                    {
+                        case "UPCBARCODE": type = BarcodeStandard.Type.UpcA; break;
+                        case "EAN-13": type = BarcodeStandard.Type.Ean13; break;
+                        case "EAN-8": type = BarcodeStandard.Type.Ean8; break;
+                        case "CODE11": type = BarcodeStandard.Type.Code11; break;
+                        case "CODE39": type = BarcodeStandard.Type.Code39; break;
+                        case "CODE39EXTENDED": type = BarcodeStandard.Type.Code39Extended; break;
+                        case "CODABAR": type = BarcodeStandard.Type.Codabar; break;
+                        case "CODE39 MOD 43": type = BarcodeStandard.Type.Code39Mod43; break;
+                        case "CODE93": type = BarcodeStandard.Type.Code93; break;
+                        case "INTERLEAVED 2 OF 5": type = BarcodeStandard.Type.Interleaved2Of5; break;
+                        case "STANDARD 2 OF 5": type = BarcodeStandard.Type.Standard2Of5; break;
+                        case "CODE128": type = BarcodeStandard.Type.Code128; break;
+                        case "CODE128A": type = BarcodeStandard.Type.Code128A; break;
+                        case "CODE128B": type = BarcodeStandard.Type.Code128B; break;
+                        case "CODE128C": type = BarcodeStandard.Type.Code128C; break;
+                        case "PHARMACODE": type = BarcodeStandard.Type.Pharmacode; break;
+                        default:
+                            throw new Exception("Specified barcode type is not supported");
+                    }
+
+                    if (type != BarcodeStandard.Type.Unspecified)
+                    {
+                        Barcode barcode = new Barcode();
+
+                        if (Enum.IsDefined(typeof(BarcodeStandard.Type), barcodeType))
+                        {
+                            barcode.EncodedType = (BarcodeStandard.Type)Enum.Parse(typeof(BarcodeStandard.Type), barcodeType, true);
+                        }
+                        if (customReportItem.Style != null && !string.IsNullOrEmpty(customReportItem.Style.BackgroundColor))
+                        {
+                            var color = (System.Drawing.Color)new System.Drawing.ColorConverter().ConvertFromInvariantString(backColor);
+                            barcode.BackColor = new SKColor(color.R, color.G, color.B, color.A);
+                        }
+                        if (displayText)
+                        {
+                            barcode.IncludeLabel = true;
+                        }
+
+                        barcode.AlternateLabel = barcodeValue;
+                        SkiaSharp.SKImage barcodeimage = barcode.Encode(type, barcodeValue, barcodeWidth, barcodeHeight);
+                        return GetThirdPartyImageBytes(barcodeimage);
+                    }
+                    return imageData;
+                }
+#else
                 else
                 {
                     TYPE type = TYPE.UNSPECIFIED;
@@ -130,6 +187,8 @@ namespace BoldReports.Extensions.BarcodeCRI
                     }
                     return imageData;
                 }
+
+#endif
             }
             catch
             {
@@ -167,7 +226,21 @@ namespace BoldReports.Extensions.BarcodeCRI
                 return imageData;
             }
         }
+#if WpfCore
+        private byte[] GetThirdPartyImageBytes(SkiaSharp.SKImage barcodeimage)
+        {
 
+            SKData imagesData = barcodeimage.Encode(SKEncodedImageFormat.Png, 100);
+
+            // Return the byte array from the MemoryStream
+            Stream stream = new MemoryStream();
+            stream = imagesData.AsStream();
+            byte[] imageData = new byte[(int)stream.Length];
+            stream.Seek(0, SeekOrigin.Begin);
+            stream.Read(imageData, 0, (int)stream.Length);
+            return imageData;
+        }
+#endif
         private object LookupCustomProperty(RDL.DOM.CustomProperties customProperties, string name)
         {
             object customPropertyValue = bool.FalseString;

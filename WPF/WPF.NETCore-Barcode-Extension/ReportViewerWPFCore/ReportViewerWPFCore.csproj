@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
@@ -12,12 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bold.Licensing" Version="5.4.38" />
-    <PackageReference Include="BoldReports.WPF" Version="5.4.38" />
+    <PackageReference Include="Bold.Licensing" Version="6.2.41" />
+    <PackageReference Include="BoldReports.WPF" Version="6.2.41" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BoldReports.Extensions.BarcodeCRI\BoldReports.Extensions.BarcodeCRI.csproj" />
+    <ProjectReference Include="..\BoldReports.Extensions.BarcodeCRI\BoldReports.Extensions.BarcodeCRICore.csproj" />
   </ItemGroup>
 
 </Project>

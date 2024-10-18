@@ -7,7 +7,7 @@ Integrating various data sources such as [JSON](https://help.boldreports.com/sta
 Ensure you have the following prerequisites before proceeding:
 
 * Visual Studio 2019 or later
-* .NET 5.0 or higher
+* .NET 6.0 or higher
 
 ## Running the Example
 

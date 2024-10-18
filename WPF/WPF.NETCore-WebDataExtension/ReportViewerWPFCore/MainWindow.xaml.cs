@@ -1,9 +1,12 @@
-﻿using BoldReports.RDL.DOM;
+﻿using BoldReports.Data.WebData;
+using BoldReports.RDL.DOM;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Pipes;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -34,7 +37,7 @@ namespace ReportViewerWPFCore
             string currentDirectory = Environment.CurrentDirectory;
             int binIndex = currentDirectory.IndexOf("bin", StringComparison.OrdinalIgnoreCase);
             string filePathWithoutBin = binIndex >= 0 ? currentDirectory.Substring(0, binIndex) : currentDirectory;
-            string reportPath = filePathWithoutBin + @"Resources\barcode.rdl";
+            string reportPath = filePathWithoutBin + @"Resources\JSONReport.rdl";
             this.reportViewer.ReportPath = reportPath;
             this.reportViewer.RefreshReport();
         }

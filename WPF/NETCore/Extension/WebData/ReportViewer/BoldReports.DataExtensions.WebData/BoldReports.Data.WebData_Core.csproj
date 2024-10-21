@@ -15,7 +15,7 @@
     <Win32Resource />
     <SignAssembly>true</SignAssembly>
 	<OutputType>Library</OutputType>
-	<TargetFramework>net8.0</TargetFramework>
+	<TargetFramework>net8.0-windows</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

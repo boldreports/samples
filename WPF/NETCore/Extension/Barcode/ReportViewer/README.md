@@ -7,7 +7,7 @@ Enhance your WPF .NET Core applications reporting capabilities by integrating ba
 Ensure you have the following prerequisites before proceeding:
 
 * Visual Studio 2019 or later
-* .NET 5.0 or higher
+* .NET 6.0 or higher
 
 ## Running the Sample
 

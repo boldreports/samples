@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <link href="https://cdn.boldreports.com/6.1.45/content/v2.0/tailwind-light/bold.report-designer.min.css" rel="stylesheet" />
+        <link href="https://cdn.boldreports.com/6.3.24/content/v2.0/tailwind-light/bold.report-designer.min.css" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.37.0/codemirror.min.css" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.37.0/addon/hint/show-hint.min.css" rel="stylesheet" />
 
@@ -14,18 +14,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.37.0/mode/vb/vb.min.js" type="text/javascript"></script>
 
         <!-- Report Designer component dependent scripts -->
-        <script src="https://cdn.boldreports.com/6.1.45/scripts/v2.0/common/bold.reports.common.min.js"></script>
-        <script src="https://cdn.boldreports.com/6.1.45/scripts/v2.0/common/bold.reports.widgets.min.js"></script>
+        <script src="https://cdn.boldreports.com/6.3.24/scripts/v2.0/common/bold.reports.common.min.js"></script>
+        <script src="https://cdn.boldreports.com/6.3.24/scripts/v2.0/common/bold.reports.widgets.min.js"></script>
 
         <!-- Report Viewer and Designer component scripts -->  
-        <script src="https://cdn.boldreports.com/6.1.45/scripts/v2.0/bold.report-viewer.min.js"></script>
-        <script src="https://cdn.boldreports.com/6.1.45/scripts/v2.0/bold.report-designer.min.js"></script>
+        <script src="https://cdn.boldreports.com/6.3.24/scripts/v2.0/bold.report-viewer.min.js"></script>
+        <script src="https://cdn.boldreports.com/6.3.24/scripts/v2.0/bold.report-designer.min.js"></script>
     </head>
     <body>
         <!-- Creating a div tag which will act as a container for boldReportDesigner widget.-->
         <div style="height: 600px; width: 1250px; min-height: 400px;" id="designer"></div>
         <script type="text/javascript">
-            var reportControlId = 'designer';
             var isCategoryRendered = false;
             $("#designer").boldReportDesigner({
                 reportServerUrl: 'https://on-premise-demo.boldreports.com/reporting/api/site/site1',
@@ -37,29 +36,40 @@
 
 
 			function controlInitialized(args) {
-				var designer = $('#' + reportControlId).data('boldReportDesigner');
+				var designerObject = $('#designer').data('boldReportDesigner');
 				ej.ReportDesignerUtility.Toolbar.prototype.saveServerClick = function () {
 					var browseDialog = this.designer.getInstance('BrowseDialog');
 					browseDialog.allowRootSave = this.designer.allowRootSave;
-					browseDialog.openBrowseDialog(this, 'saveServerReport', ej.ReportDesigner.BrowseType.Save, null, this.designer.reportFileName);
-					if (!isCategoryRendered) {
-						var footerTag = $('#' + reportControlId + '_footer_btn_div');
-						var categoryButtonDiv = ej.buildTag('button', "New Category", {'float': 'left'}, { id: reportControlId + '_category_btn' });
+					browseDialog.openDialog(ej.ReportDesigner.BrowseType.Save, $.proxy(saveAsServer, this), this.designer.reportFileName);
+					if (!this.isCategoryRendered) {
+						var footerTag = $('#designer' + '_footer_btn_div');
+						var categoryButtonDiv = ej.buildTag('button', "New Category", {'float': 'left'}, { id: 'designer' + '_category_btn' });
 						footerTag.append(categoryButtonDiv);
 						var categoryButton = new ejs.buttons.Button({
 							width: '83px', showRoundedCorner: false, size: 'mini', 'height': '25px',
 						});
 						categoryButtonDiv.appendTo(categoryButton[0]);
-						categoryButtonDiv[0].onclick = publishOpen
-						isCategoryRendered = true;
+						categoryButtonDiv[0].onclick = () => {
+						var designer = $('#designer').data('boldReportDesigner');
+							designer.openPublishDialog("", false, function (args) { }, false, true, "", "");
+						};
+						this.isCategoryRendered = true;
+					}
+					function saveAsServer(args) {
+						var designer = $('#designer').data('boldReportDesigner');
+						if (args && ej.ReportUtil.isBooleanTrue(args.isExist)) {
+							var folderPath = args.category + ((args.category === '/') ? '' : '/') + args.name;
+							designer.editServerReport(folderPath, args.callBackInfo);
+						} else {
+							designer.serverCategory = {
+								name: args.name,
+								category: args.category
+							};
+							designer.createServerReport(designer.serverCategory, args.callBackInfo);
+						}
 					}
 				};
-			}
-
-			function publishOpen() {
-				var designer = $('#' + reportControlId).data('boldReportDesigner');
-				designer.openPublishDialog("", false, function (args) {}, false, true, "", "");
-			}
+			}				
         </script>
     </body>
 </html>

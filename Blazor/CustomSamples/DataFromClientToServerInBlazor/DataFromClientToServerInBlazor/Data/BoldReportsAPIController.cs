@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Caching.Memory;
 using Newtonsoft.Json;
 
-namespace BlazorAppViewer6.Data
+namespace DataFromClientToServerInBlazor.Data
 {
     [Route("api/{controller}/{action}/{id?}")]
     public class BoldReportsAPIController : ControllerBase, IReportController

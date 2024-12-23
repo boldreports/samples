@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppViewer6", "BlazorAppViewer6\BlazorAppViewer6.csproj", "{DD4529A5-5B41-43C3-9FD1-15C57565A256}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFromClientToServerInBlazor", "DataFromClientToServerInBlazor\DataFromClientToServerInBlazor.csproj", "{1A021138-0A06-4848-AC11-7D1AC70C14CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DD4529A5-5B41-43C3-9FD1-15C57565A256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD4529A5-5B41-43C3-9FD1-15C57565A256}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD4529A5-5B41-43C3-9FD1-15C57565A256}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD4529A5-5B41-43C3-9FD1-15C57565A256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A021138-0A06-4848-AC11-7D1AC70C14CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A021138-0A06-4848-AC11-7D1AC70C14CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A021138-0A06-4848-AC11-7D1AC70C14CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A021138-0A06-4848-AC11-7D1AC70C14CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
